@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#f97316" />
+    <meta name="description" content="Plan your perfect Iceland adventure in under 60 seconds with AI-powered personalized itineraries" />
     <title>TourOn – Your Iceland Adventure, Planned in Seconds</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -25,6 +29,13 @@
         background-color: #0f172a; /* Fallback color */
         min-height: 100vh;
         line-height: 1.6;
+      }
+
+      /* Ensure background works on mobile */
+      @media (max-width: 768px) {
+        body {
+          background-attachment: scroll;
+        }
       }
 
       /* Fallback if background doesn't load */
@@ -351,7 +362,327 @@
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
         }
+
+        /* Mobile typography */
+        h1 {
+          font-size: 3rem !important;
+        }
+
+        h2 {
+          font-size: 2.5rem !important;
+          line-height: 1.1 !important;
+        }
+
+        h3 {
+          font-size: 1.5rem !important;
+        }
+
+        /* Mobile spacing */
+        .glass-effect {
+          padding: 1.5rem !important;
+          margin: 1rem !important;
+        }
+
+        .glass-effect-light {
+          padding: 1.25rem !important;
+        }
+
+        .glass-card {
+          padding: 1rem !important;
+        }
+
+        /* Mobile form optimizations */
+        .grid.md\\:grid-cols-2 {
+          grid-template-columns: 1fr !important;
+          gap: 1rem !important;
+        }
+
+        .grid.md\\:grid-cols-3 {
+          grid-template-columns: 1fr !important;
+          gap: 1rem !important;
+        }
+
+        .grid.grid-cols-2.lg\\:grid-cols-3 {
+          grid-template-columns: 1fr !important;
+          gap: 0.75rem !important;
+        }
+
+        /* Mobile button sizing */
+        button {
+          padding: 1rem 1.5rem !important;
+          font-size: 1rem !important;
+        }
+
+        .btn-primary {
+          padding: 1.25rem 2rem !important;
+        }
+
+        /* Mobile input sizing */
+        input, select, textarea {
+          padding: 0.875rem 1rem !important;
+          font-size: 1rem !important;
+        }
+
+        /* Mobile progress indicator */
+        .progress-step span {
+          font-size: 0.75rem !important;
+        }
+
+        .progress-step .step-number {
+          width: 2rem !important;
+          height: 2rem !important;
+          font-size: 0.875rem !important;
+        }
+
+        /* Mobile value propositions */
+        .grid.md\\:grid-cols-3 > div {
+          text-align: center;
+          padding: 1.5rem 1rem !important;
+        }
+
+        /* Mobile hero adjustments */
+        .text-7xl {
+          font-size: 3rem !important;
+        }
+
+        .text-6xl {
+          font-size: 2.25rem !important;
+        }
+
+        .text-5xl {
+          font-size: 2rem !important;
+        }
+
+        .text-xl {
+          font-size: 1.125rem !important;
+        }
+
+        /* Mobile section spacing */
+        section {
+          padding: 2rem 1rem !important;
+        }
+
+        .py-20 {
+          padding-top: 3rem !important;
+          padding-bottom: 3rem !important;
+        }
+
+        .py-16 {
+          padding-top: 2.5rem !important;
+          padding-bottom: 2.5rem !important;
+        }
+
+                 /* Mobile checkbox/radio improvements */
+         .grid.grid-cols-2.lg\\:grid-cols-3 label {
+           flex-direction: row !important;
+           text-align: left !important;
+           padding: 1rem !important;
+           align-items: flex-start !important;
+         }
+
+         .grid.grid-cols-2.lg\\:grid-cols-3 label input {
+           margin: 0.25rem 0.75rem 0 0 !important;
+           flex-shrink: 0 !important;
+         }
+
+         .grid.grid-cols-2.lg\\:grid-cols-3 label i {
+           margin: 0 0.75rem 0 0 !important;
+           flex-shrink: 0 !important;
+         }
+
+         .grid.grid-cols-2.lg\\:grid-cols-3 label div {
+           flex: 1 !important;
+         }
+
+        /* Mobile travel pace cards */
+        .grid.md\\:grid-cols-3 label {
+          padding: 1.25rem !important;
+        }
+
+        /* Touch-friendly interactions */
+        button, input, label {
+          min-height: 44px;
+        }
+
+        /* Mobile calendar adjustments */
+        .flatpickr-calendar {
+          font-size: 0.875rem !important;
+        }
       }
+
+             /* Desktop optimizations */
+       @media (min-width: 769px) {
+         body {
+           background-attachment: fixed;
+         }
+       }
+
+       /* Tablet optimizations */
+       @media (min-width: 769px) and (max-width: 1024px) {
+         .glass-effect {
+           padding: 2rem;
+         }
+
+         .text-6xl {
+           font-size: 3.5rem;
+         }
+
+         .text-5xl {
+           font-size: 2.5rem;
+         }
+
+         /* Tablet grid adjustments */
+         .grid.lg\\:grid-cols-3 {
+           grid-template-columns: repeat(2, 1fr) !important;
+         }
+       }
+
+             /* Small mobile (phones in portrait) */
+       @media (max-width: 480px) {
+         .glass-effect {
+           margin: 0.5rem !important;
+           border-radius: 1rem !important;
+         }
+
+         .rounded-3xl {
+           border-radius: 1rem !important;
+         }
+
+         .rounded-2xl {
+           border-radius: 0.75rem !important;
+         }
+
+         /* Extra small text adjustments */
+         .text-6xl {
+           font-size: 2rem !important;
+         }
+
+         .text-2xl {
+           font-size: 1.25rem !important;
+         }
+
+         /* Compact progress indicator */
+         .progress-step {
+           flex-direction: column !important;
+           align-items: center !important;
+           gap: 0.25rem !important;
+         }
+
+         .flex-1.mx-6 {
+           display: none !important;
+         }
+
+         /* Stack interest cards vertically on very small screens */
+         .grid.grid-cols-2 {
+           grid-template-columns: 1fr !important;
+         }
+
+         /* Ensure all grids are single column on small mobile */
+         .grid.grid-cols-2.lg\\:grid-cols-3 {
+           grid-template-columns: 1fr !important;
+         }
+
+         /* Mobile-first button sizing */
+         .btn-primary {
+           font-size: 0.875rem !important;
+           padding: 1rem 1.5rem !important;
+         }
+
+         /* Adjust mobile form elements */
+         .glass-card {
+           padding: 0.75rem !important;
+         }
+
+         /* Better mobile spacing for interest cards */
+         .grid.grid-cols-2.lg\\:grid-cols-3 label {
+           padding: 0.75rem !important;
+         }
+       }
+
+      /* Landscape phone optimization */
+      @media (max-height: 500px) and (orientation: landscape) {
+        .min-h-screen {
+          min-height: auto !important;
+          padding: 1rem 0 !important;
+        }
+
+        .glass-effect {
+          padding: 1rem !important;
+        }
+
+        .text-6xl, .text-5xl {
+          font-size: 1.875rem !important;
+        }
+      }
+
+             /* High DPI displays */
+       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+         .glass-effect, .glass-effect-light, .glass-card {
+           backdrop-filter: blur(16px);
+           -webkit-backdrop-filter: blur(16px);
+         }
+       }
+
+       /* Mobile calendar enhancements */
+       .calendar-open {
+         overflow: hidden;
+       }
+
+       @media (max-width: 768px) {
+         .flatpickr-calendar {
+           width: 100% !important;
+           max-width: 320px !important;
+           margin: 0 auto !important;
+           left: 50% !important;
+           transform: translateX(-50%) !important;
+         }
+
+         .flatpickr-months {
+           padding: 1rem !important;
+         }
+
+         .flatpickr-day {
+           width: 2.5rem !important;
+           height: 2.5rem !important;
+           line-height: 2.5rem !important;
+         }
+       }
+
+       /* iOS Safari specific fixes */
+       @supports (-webkit-touch-callout: none) {
+         .glass-effect, .glass-effect-light, .glass-card {
+           -webkit-backdrop-filter: blur(12px);
+           backdrop-filter: blur(12px);
+         }
+
+         /* Fix iOS viewport height issues */
+         .min-h-screen {
+           min-height: -webkit-fill-available;
+         }
+       }
+
+               /* Android Chrome specific fixes */
+        @media screen and (max-width: 768px) {
+          /* Prevent horizontal scrolling */
+          body {
+            overflow-x: hidden;
+            /* Ensure background works on mobile */
+            background-attachment: scroll;
+          }
+
+          /* Fix Android viewport issues */
+          .min-h-screen {
+            min-height: 100vh;
+            min-height: calc(var(--vh, 1vh) * 100);
+          }
+        }
+
+       /* PWA-like styling */
+       @media (display-mode: standalone) {
+         .glass-effect {
+           margin-top: env(safe-area-inset-top);
+         }
+       }
     </style>
   </head>
   <body class="text-white">
@@ -854,6 +1185,67 @@
       // Observe form elements
       document.querySelectorAll('.input-group, .grid').forEach(el => {
         observer.observe(el);
+      });
+
+      // Mobile-specific enhancements
+      document.addEventListener('DOMContentLoaded', function() {
+        // Prevent zoom on input focus for iOS
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+          const inputs = document.querySelectorAll('input, select, textarea');
+          inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+              this.style.fontSize = '16px';
+            });
+            input.addEventListener('blur', function() {
+              this.style.fontSize = '';
+            });
+          });
+        }
+
+        // Add touch feedback for mobile
+        const touchElements = document.querySelectorAll('button, label, .hover-lift, .hover-subtle');
+        touchElements.forEach(element => {
+          element.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.98)';
+          });
+          
+          element.addEventListener('touchend', function() {
+            setTimeout(() => {
+              this.style.transform = '';
+            }, 150);
+          });
+        });
+
+        // Improve mobile calendar experience
+        const dateInput = document.getElementById('dates');
+        if (dateInput) {
+          dateInput.addEventListener('click', function() {
+            // Add mobile-friendly class when calendar opens
+            document.body.classList.add('calendar-open');
+          });
+        }
+
+        // Handle orientation changes
+        window.addEventListener('orientationchange', function() {
+          setTimeout(() => {
+            window.scrollTo(0, 0);
+          }, 500);
+        });
+
+        // Smooth scroll for mobile anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              const offsetTop = target.offsetTop - 20; // Add some padding
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
       });
     </script>
   </body>
