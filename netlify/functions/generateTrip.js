@@ -1,14 +1,13 @@
-const { Configuration, OpenAIApi } = require("openai");
+const OpenAI = require('openai');
 
 exports.handler = async (event) => {
   try {
     const body = JSON.parse(event.body);
     const { name, email, dates, interests, pace } = body;
 
-    const configuration = new Configuration({
+    const openai = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY,
     });
-    const openai = new OpenAIApi(configuration);
 
     const prompt = `You're a friendly and highly experienced Icelandic travel expert.
 
@@ -24,23 +23,33 @@ The itinerary should:
 Avoid repeating locations, and space the attractions naturally.
 Respond only with the formatted itinerary.`;
 
-    const completion = await openai.createChatCompletion({
+    const completion = await openai.chat.completions.create({
       model: "gpt-4-turbo",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7,
       max_tokens: 1000,
     });
 
-    const itinerary = completion.data.choices[0].message.content;
+    const itinerary = completion.choices[0].message.content;
 
     return {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS'
+      },
       body: JSON.stringify({ itinerary }),
     };
   } catch (error) {
     console.error("Error generating trip:", error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({ error: "Failed to generate itinerary." }),
     };
   }
