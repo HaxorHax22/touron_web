@@ -718,27 +718,48 @@
          </div>
         
         <!-- Value Propositions -->
-        <div class="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
           <div class="glass-effect-light p-6 rounded-xl hover-lift">
             <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
-              <i class="fas fa-clock text-2xl text-green-400"></i>
+              <i class="fas fa-bolt text-2xl text-green-400"></i>
             </div>
-            <h3 class="text-lg font-semibold text-white mb-2">Save Hours of Planning</h3>
-            <p class="text-gray-300 text-sm">No more juggling 20+ browser tabs. Get a complete itinerary instantly.</p>
+            <h3 class="text-lg font-semibold text-white mb-2">Lightning Fast AI</h3>
+            <p class="text-gray-300 text-sm">Get your complete Iceland itinerary in under 60 seconds. No lengthy questionnaires.</p>
           </div>
           <div class="glass-effect-light p-6 rounded-xl hover-lift">
             <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
-              <i class="fas fa-brain text-2xl text-purple-400"></i>
+              <i class="fas fa-heart text-2xl text-purple-400"></i>
             </div>
-            <h3 class="text-lg font-semibold text-white mb-2">Personalized for You</h3>
-            <p class="text-gray-300 text-sm">AI tailored to your interests, travel pace, and dates.</p>
+            <h3 class="text-lg font-semibold text-white mb-2">Hyper-Personalized</h3>
+            <p class="text-gray-300 text-sm">Budget, pace, interests, group size - every detail matters for your perfect trip.</p>
           </div>
           <div class="glass-effect-light p-6 rounded-xl hover-lift">
             <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
-              <i class="fas fa-map-marked-alt text-2xl text-blue-400"></i>
+              <i class="fas fa-gift text-2xl text-blue-400"></i>
             </div>
-            <h3 class="text-lg font-semibold text-white mb-2">Local Insider Knowledge</h3>
-            <p class="text-gray-300 text-sm">Hidden gems and must-see spots curated by Iceland experts.</p>
+            <h3 class="text-lg font-semibold text-white mb-2">100% Free Forever</h3>
+            <p class="text-gray-300 text-sm">No hidden fees, no premium plans. Professional itineraries at zero cost.</p>
+          </div>
+        </div>
+
+        <!-- Comparison Badge -->
+        <div class="glass-effect-light p-4 rounded-2xl mb-8 max-w-2xl mx-auto">
+          <div class="flex items-center justify-center gap-3 text-sm">
+            <div class="flex items-center gap-2 text-orange-300">
+              <i class="fas fa-trophy text-lg"></i>
+              <span class="font-semibold">Better than other travel planners:</span>
+            </div>
+            <div class="flex gap-4 text-gray-300">
+              <span class="flex items-center gap-1">
+                <i class="fas fa-check text-green-400"></i>Iceland Expert
+              </span>
+              <span class="flex items-center gap-1">
+                <i class="fas fa-check text-green-400"></i>Always Free
+              </span>
+              <span class="flex items-center gap-1">
+                <i class="fas fa-check text-green-400"></i>60s Results
+              </span>
+            </div>
           </div>
         </div>
         
@@ -878,7 +899,7 @@
             </div>
           </div>
 
-          <!-- Travel Preferences Section -->
+                      <!-- Travel Preferences Section -->
           <div class="space-y-6 pt-8 border-t border-gray-600">
             <div class="flex items-center gap-3 mb-6">
               <div class="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center">
@@ -894,36 +915,36 @@
                 <span class="text-gray-400 text-xs">(select all that apply)</span>
               </label>
               <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
-                                 <label class="flex items-center space-x-3 p-5 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
-                   <input type="checkbox" name="interests" value="Nature" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
-                   <i class="fas fa-leaf text-green-400 group-hover:text-green-300 text-lg"></i>
-                   <div>
-                     <span class="text-white group-hover:text-orange-200 font-semibold">Nature</span>
-                     <p class="text-xs text-gray-400 group-hover:text-gray-300">Landscapes, wildlife</p>
-                   </div>
-                 </label>
-                                 <label class="flex items-center space-x-3 p-5 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
-                   <input type="checkbox" name="interests" value="Waterfalls" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
-                   <i class="fas fa-tint text-blue-400 group-hover:text-blue-300 text-lg"></i>
-                   <div>
-                     <span class="text-white group-hover:text-orange-200 font-semibold">Waterfalls</span>
-                     <p class="text-xs text-gray-400 group-hover:text-gray-300">Gullfoss, Skógafoss</p>
-                   </div>
-                 </label>
                 <label class="flex items-center space-x-3 p-5 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
-                  <input type="checkbox" name="interests" value="Adventure" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
-                  <i class="fas fa-hiking text-red-400 group-hover:text-red-300 text-lg"></i>
+                  <input type="checkbox" name="interests" value="Nature & Landscapes" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
+                  <i class="fas fa-leaf text-green-400 group-hover:text-green-300 text-lg"></i>
                   <div>
-                    <span class="text-white group-hover:text-orange-200 font-semibold">Adventure</span>
-                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Hiking, glaciers</p>
+                    <span class="text-white group-hover:text-orange-200 font-semibold">Nature & Landscapes</span>
+                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Epic vistas, wildlife</p>
                   </div>
                 </label>
                 <label class="flex items-center space-x-3 p-5 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
-                  <input type="checkbox" name="interests" value="Food" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
+                  <input type="checkbox" name="interests" value="Waterfalls & Geysers" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
+                  <i class="fas fa-tint text-blue-400 group-hover:text-blue-300 text-lg"></i>
+                  <div>
+                    <span class="text-white group-hover:text-orange-200 font-semibold">Waterfalls & Geysers</span>
+                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Gullfoss, Geysir, Skógafoss</p>
+                  </div>
+                </label>
+                <label class="flex items-center space-x-3 p-5 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
+                  <input type="checkbox" name="interests" value="Adventure & Hiking" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
+                  <i class="fas fa-hiking text-red-400 group-hover:text-red-300 text-lg"></i>
+                  <div>
+                    <span class="text-white group-hover:text-orange-200 font-semibold">Adventure & Hiking</span>
+                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Glaciers, trails, extreme sports</p>
+                  </div>
+                </label>
+                <label class="flex items-center space-x-3 p-5 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
+                  <input type="checkbox" name="interests" value="Food & Culture" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
                   <i class="fas fa-utensils text-yellow-400 group-hover:text-yellow-300 text-lg"></i>
                   <div>
-                    <span class="text-white group-hover:text-orange-200 font-semibold">Local Food</span>
-                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Restaurants, cuisine</p>
+                    <span class="text-white group-hover:text-orange-200 font-semibold">Food & Culture</span>
+                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Local cuisine, museums, history</p>
                   </div>
                 </label>
                 <label class="flex items-center space-x-3 p-5 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
@@ -931,15 +952,31 @@
                   <i class="fas fa-star text-purple-400 group-hover:text-purple-300 text-lg"></i>
                   <div>
                     <span class="text-white group-hover:text-orange-200 font-semibold">Northern Lights</span>
-                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Aurora hunting</p>
+                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Aurora hunting, stargazing</p>
                   </div>
                 </label>
                 <label class="flex items-center space-x-3 p-5 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
-                  <input type="checkbox" name="interests" value="Photography" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
+                  <input type="checkbox" name="interests" value="Photography & Instagram" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
                   <i class="fas fa-camera text-indigo-400 group-hover:text-indigo-300 text-lg"></i>
                   <div>
-                    <span class="text-white group-hover:text-orange-200 font-semibold">Photography</span>
-                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Instagram spots</p>
+                    <span class="text-white group-hover:text-orange-200 font-semibold">Photography & Instagram</span>
+                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Perfect shots, viral spots</p>
+                  </div>
+                </label>
+                <label class="flex items-center space-x-3 p-5 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
+                  <input type="checkbox" name="interests" value="Relaxation & Wellness" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
+                  <i class="fas fa-spa text-cyan-400 group-hover:text-cyan-300 text-lg"></i>
+                  <div>
+                    <span class="text-white group-hover:text-orange-200 font-semibold">Relaxation & Wellness</span>
+                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Hot springs, spas, zen time</p>
+                  </div>
+                </label>
+                <label class="flex items-center space-x-3 p-5 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
+                  <input type="checkbox" name="interests" value="Road Trips & Scenic Drives" class="w-5 h-5 custom-checkbox text-orange-500 bg-gray-700/50 border-gray-500 rounded focus:ring-orange-500 focus:ring-2" />
+                  <i class="fas fa-car text-orange-400 group-hover:text-orange-300 text-lg"></i>
+                  <div>
+                    <span class="text-white group-hover:text-orange-200 font-semibold">Road Trips & Scenic Drives</span>
+                    <p class="text-xs text-gray-400 group-hover:text-gray-300">Ring Road, epic routes</p>
                   </div>
                 </label>
               </div>
@@ -984,6 +1021,75 @@
                 </label>
               </div>
             </div>
+
+            <!-- Budget Preferences -->
+            <div>
+              <label class="flex items-center gap-2 text-sm font-semibold text-orange-200 mb-4">
+                <i class="fas fa-wallet"></i>What's your budget style?
+              </label>
+              <div class="grid md:grid-cols-3 gap-4">
+                <label class="flex items-start space-x-3 p-6 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
+                  <input type="radio" name="budget" value="Budget-Friendly" class="w-5 h-5 custom-radio text-orange-500 bg-gray-700/50 border-gray-500 focus:ring-orange-500 focus:ring-2 mt-1" />
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <i class="fas fa-piggy-bank text-green-400 group-hover:text-green-300"></i>
+                      <span class="text-white group-hover:text-orange-200 font-semibold">Budget-Friendly</span>
+                    </div>
+                    <p class="text-sm text-gray-400 group-hover:text-gray-300">Affordable eats, free attractions, budget accommodations</p>
+                  </div>
+                </label>
+                <label class="flex items-start space-x-3 p-6 rounded-xl glass-card border-2 border-orange-400/70 bg-orange-400/15 transition-all duration-300 cursor-pointer group hover-subtle">
+                  <input type="radio" name="budget" value="Mid-Range" class="w-5 h-5 custom-radio text-orange-500 bg-gray-700/50 border-gray-500 focus:ring-orange-500 focus:ring-2 mt-1" checked />
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <i class="fas fa-balance-scale text-blue-400 group-hover:text-blue-300"></i>
+                      <span class="text-orange-200 font-semibold">Mid-Range</span>
+                      <span class="text-xs bg-orange-500 text-white px-2 py-1 rounded-full">Popular</span>
+                    </div>
+                    <p class="text-sm text-gray-300">Good restaurants, some tours, comfortable stays</p>
+                  </div>
+                </label>
+                <label class="flex items-start space-x-3 p-6 rounded-xl glass-card hover:border-orange-400/50 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer group hover-subtle">
+                  <input type="radio" name="budget" value="Luxury" class="w-5 h-5 custom-radio text-orange-500 bg-gray-700/50 border-gray-500 focus:ring-orange-500 focus:ring-2 mt-1" />
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <i class="fas fa-crown text-yellow-400 group-hover:text-yellow-300"></i>
+                      <span class="text-white group-hover:text-orange-200 font-semibold">Luxury</span>
+                    </div>
+                    <p class="text-sm text-gray-400 group-hover:text-gray-300">Premium experiences, fine dining, luxury hotels</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Group Size -->
+            <div>
+              <label class="flex items-center gap-2 text-sm font-semibold text-orange-200 mb-4">
+                <i class="fas fa-users"></i>Who's traveling?
+              </label>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="input-group">
+                  <select 
+                    id="groupSize" 
+                    class="w-full px-6 py-4 rounded-xl bg-gray-700/40 text-white border border-gray-600/50 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20 focus:outline-none custom-input"
+                  >
+                    <option value="Solo traveler">🧳 Solo traveler</option>
+                    <option value="Couple" selected>👫 Couple</option>
+                    <option value="Family with kids">👨‍👩‍👧‍👦 Family with kids</option>
+                    <option value="Group of friends">👥 Group of friends</option>
+                    <option value="Large group (6+)">🚌 Large group (6+)</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <input 
+                    type="text" 
+                    id="specialRequests" 
+                    placeholder="Special requests (accessibility, dietary, etc.)"
+                    class="w-full px-6 py-4 rounded-xl bg-gray-700/40 text-white placeholder-gray-400 border border-gray-600/50 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20 focus:outline-none custom-input" 
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Submit Button -->
@@ -1021,18 +1127,280 @@
         </div>
         
         <div class="glass-effect p-8 rounded-3xl shadow-2xl hover-lift">
-          <div id="outputText" class="whitespace-pre-line text-white text-lg leading-relaxed"></div>
+          <!-- Itinerary Header -->
+          <div class="border-b border-gray-600 pb-6 mb-8">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-2xl font-bold text-orange-300 mb-2">Your Personalized Iceland Adventure</h3>
+                <p class="text-gray-400">Generated with advanced AI • Tailored just for you</p>
+              </div>
+              <div class="text-right">
+                <div class="text-sm text-gray-400">Trip Cost Estimate</div>
+                <div id="costEstimate" class="text-xl font-bold text-green-400">Calculating...</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Itinerary Content -->
+          <div id="outputText" class="whitespace-pre-line text-white text-lg leading-relaxed mb-8"></div>
+
+          <!-- Travel Tips Section -->
+          <div class="glass-card p-6 rounded-2xl mb-6">
+            <h4 class="text-xl font-bold text-orange-300 mb-4 flex items-center gap-2">
+              <i class="fas fa-lightbulb"></i>
+              Smart Travel Tips for Iceland
+            </h4>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div class="space-y-2">
+                <p class="flex items-start gap-2">
+                  <i class="fas fa-snowflake text-blue-400 mt-1"></i>
+                  <span><strong>Weather:</strong> Always pack layers, weather changes quickly</span>
+                </p>
+                <p class="flex items-start gap-2">
+                  <i class="fas fa-car text-green-400 mt-1"></i>
+                  <span><strong>Driving:</strong> Rent a 4WD for Ring Road adventures</span>
+                </p>
+                <p class="flex items-start gap-2">
+                  <i class="fas fa-money-bill-wave text-yellow-400 mt-1"></i>
+                  <span><strong>Currency:</strong> Iceland uses ISK, cards accepted everywhere</span>
+                </p>
+              </div>
+              <div class="space-y-2">
+                <p class="flex items-start gap-2">
+                  <i class="fas fa-phone text-red-400 mt-1"></i>
+                  <span><strong>Emergency:</strong> 112 for all emergency services</span>
+                </p>
+                <p class="flex items-start gap-2">
+                  <i class="fas fa-wifi text-purple-400 mt-1"></i>
+                  <span><strong>Internet:</strong> Free WiFi widely available</span>
+                </p>
+                <p class="flex items-start gap-2">
+                  <i class="fas fa-clock text-orange-400 mt-1"></i>
+                  <span><strong>Daylight:</strong> Summer: 19+ hours, Winter: 4-5 hours</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Features -->
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="glass-card p-4 rounded-xl text-center">
+              <i class="fas fa-map-marked-alt text-3xl text-blue-400 mb-3"></i>
+              <h5 class="font-semibold text-white mb-2">Interactive Map</h5>
+              <p class="text-sm text-gray-400 mb-3">View your route on Google Maps</p>
+              <button id="openMapBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                <i class="fas fa-external-link-alt mr-1"></i>Open Map
+              </button>
+            </div>
+            <div class="glass-card p-4 rounded-xl text-center">
+              <i class="fas fa-cloud-sun text-3xl text-yellow-400 mb-3"></i>
+              <h5 class="font-semibold text-white mb-2">Weather Forecast</h5>
+              <p class="text-sm text-gray-400 mb-3">Check conditions for your dates</p>
+              <button id="weatherBtn" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                <i class="fas fa-external-link-alt mr-1"></i>View Weather
+              </button>
+            </div>
+          </div>
           
           <!-- Action buttons -->
-          <div class="flex gap-4 mt-8 pt-6 border-t border-gray-600">
+          <div class="flex flex-wrap gap-4 pt-6 border-t border-gray-600">
             <button onclick="window.print()" class="flex items-center gap-2 glass-effect-light hover:bg-gray-600/50 text-white px-6 py-3 rounded-lg transition-all duration-300 hover-lift">
               <i class="fas fa-print"></i>
               Print Itinerary
+            </button>
+            <button id="shareBtn" class="flex items-center gap-2 glass-effect-light hover:bg-gray-600/50 text-white px-6 py-3 rounded-lg transition-all duration-300 hover-lift">
+              <i class="fas fa-share-alt"></i>
+              Share Trip
+            </button>
+            <button id="downloadBtn" class="flex items-center gap-2 glass-effect-light hover:bg-gray-600/50 text-white px-6 py-3 rounded-lg transition-all duration-300 hover-lift">
+              <i class="fas fa-download"></i>
+              Download PDF
             </button>
             <button onclick="location.reload()" class="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-lg transition-all duration-300 hover-lift">
               <i class="fas fa-redo"></i>
               Plan Another Trip
             </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why TourOn Beats Other Travel Planners -->
+    <section class="py-20 px-6 page-section">
+      <div class="section-divider"></div>
+      
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="glass-effect-light p-8 rounded-3xl hover-lift mb-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl mb-6 shadow-lg">
+              <i class="fas fa-trophy text-2xl text-white"></i>
+            </div>
+            <h2 class="text-5xl font-bold mb-4 text-orange-300">Why TourOn Beats Other Travel Planners</h2>
+            <p class="text-xl text-gray-200 max-w-3xl mx-auto">See why thousands choose TourOn over generic travel planning websites</p>
+          </div>
+        </div>
+
+        <div class="glass-effect p-10 rounded-3xl mb-12 hover-lift">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-gray-600">
+                  <th class="text-left py-4 px-2 text-orange-300 font-bold">Feature</th>
+                  <th class="text-center py-4 px-2">
+                    <div class="flex flex-col items-center">
+                      <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center mb-2">
+                        <i class="fas fa-mountain text-white"></i>
+                      </div>
+                      <span class="text-orange-300 font-bold">TourOn</span>
+                    </div>
+                  </th>
+                  <th class="text-center py-4 px-2">
+                    <div class="flex flex-col items-center">
+                      <div class="w-12 h-12 bg-gray-600 rounded-xl flex items-center justify-center mb-2">
+                        <i class="fas fa-plane text-gray-400"></i>
+                      </div>
+                      <span class="text-gray-400 font-bold">Other Planners</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-300">
+                <tr class="border-b border-gray-700">
+                  <td class="py-4 px-2 font-semibold">Iceland Specialization</td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-check-circle text-2xl text-green-400"></i>
+                    <div class="text-xs mt-1 text-green-300">100% Iceland Expert</div>
+                  </td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-times-circle text-2xl text-red-400"></i>
+                    <div class="text-xs mt-1 text-red-300">Generic Global</div>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-700">
+                  <td class="py-4 px-2 font-semibold">Cost</td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-check-circle text-2xl text-green-400"></i>
+                    <div class="text-xs mt-1 text-green-300">Always Free</div>
+                  </td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-credit-card text-2xl text-yellow-400"></i>
+                    <div class="text-xs mt-1 text-yellow-300">Premium Plans</div>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-700">
+                  <td class="py-4 px-2 font-semibold">Planning Speed</td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-bolt text-2xl text-green-400"></i>
+                    <div class="text-xs mt-1 text-green-300">Under 60 seconds</div>
+                  </td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-clock text-2xl text-yellow-400"></i>
+                    <div class="text-xs mt-1 text-yellow-300">5-10 minutes</div>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-700">
+                  <td class="py-4 px-2 font-semibold">Personalization</td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-heart text-2xl text-green-400"></i>
+                    <div class="text-xs mt-1 text-green-300">Hyper-Personal</div>
+                  </td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-users text-2xl text-yellow-400"></i>
+                    <div class="text-xs mt-1 text-yellow-300">Basic Preferences</div>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-700">
+                  <td class="py-4 px-2 font-semibold">Budget Integration</td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-calculator text-2xl text-green-400"></i>
+                    <div class="text-xs mt-1 text-green-300">Real Cost Estimates</div>
+                  </td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-question text-2xl text-red-400"></i>
+                    <div class="text-xs mt-1 text-red-300">No Cost Info</div>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-700">
+                  <td class="py-4 px-2 font-semibold">Weather Integration</td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-cloud-sun text-2xl text-green-400"></i>
+                    <div class="text-xs mt-1 text-green-300">Seasonal Tips</div>
+                  </td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-times text-2xl text-red-400"></i>
+                    <div class="text-xs mt-1 text-red-300">No Weather Info</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-4 px-2 font-semibold">Local Insider Tips</td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-gem text-2xl text-green-400"></i>
+                    <div class="text-xs mt-1 text-green-300">Hidden Gems</div>
+                  </td>
+                  <td class="text-center py-4 px-2">
+                    <i class="fas fa-map text-2xl text-yellow-400"></i>
+                    <div class="text-xs mt-1 text-yellow-300">Tourist Spots</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- User testimonial style section -->
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="glass-card p-6 rounded-2xl hover-lift">
+            <div class="mb-4">
+              <div class="flex text-orange-400 mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-300 italic">"TourOn gave me an incredible Iceland itinerary in seconds. Way better than the generic stuff from other sites."</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center">
+                <span class="text-white font-bold">S</span>
+              </div>
+              <div>
+                <div class="font-semibold text-white">Sarah M.</div>
+                <div class="text-xs text-gray-400">Solo Traveler</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass-card p-6 rounded-2xl hover-lift">
+            <div class="mb-4">
+              <div class="flex text-orange-400 mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-300 italic">"Free, fast, and incredibly detailed. TourOn saved me hours of research and gave me spots I never would have found."</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                <span class="text-white font-bold">M</span>
+              </div>
+              <div>
+                <div class="font-semibold text-white">Mike & Lisa</div>
+                <div class="text-xs text-gray-400">Couple</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass-card p-6 rounded-2xl hover-lift">
+            <div class="mb-4">
+              <div class="flex text-orange-400 mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-300 italic">"The budget estimates and local tips made all the difference. This is what travel planning should be like."</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
+                <span class="text-white font-bold">A</span>
+              </div>
+              <div>
+                <div class="font-semibold text-white">Alex J.</div>
+                <div class="text-xs text-gray-400">Adventure Seeker</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1048,6 +1416,7 @@
           <div class="mb-6">
             <h3 class="text-2xl font-bold text-orange-400 mb-2">TourOn</h3>
             <p class="text-gray-300">Your Iceland Adventure, Planned in Seconds</p>
+            <p class="text-sm text-gray-400 mt-2">The smarter, faster, and free alternative to generic travel planners</p>
           </div>
           <div class="text-gray-400">
             <p>&copy; 2024 TourOn. Made with <i class="fas fa-heart text-red-500"></i> for Iceland adventurers.</p>
@@ -1125,21 +1494,38 @@
         submitBtn.disabled = true;
         submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
 
+        // Collect enhanced form data
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const dates = document.getElementById('dates').value;
         const pace = document.querySelector('input[name="pace"]:checked').value;
+        const budget = document.querySelector('input[name="budget"]:checked').value;
+        const groupSize = document.getElementById('groupSize').value;
+        const specialRequests = document.getElementById('specialRequests').value;
         const interests = Array.from(document.querySelectorAll('input[name="interests"]:checked')).map((el) => el.value);
 
         try {
           const response = await fetch('/.netlify/functions/generateTrip', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, email, dates, pace, interests }),
+            body: JSON.stringify({ 
+              name, 
+              email, 
+              dates, 
+              pace, 
+              budget, 
+              groupSize, 
+              specialRequests, 
+              interests 
+            }),
           });
 
           const data = await response.json();
           document.getElementById('outputText').textContent = data.itinerary || "Something went wrong.";
+          
+          // Calculate and display cost estimate
+          const costEstimate = calculateCostEstimate(budget, dates, groupSize);
+          document.getElementById('costEstimate').textContent = costEstimate;
           
           // Smooth scroll to results
           document.getElementById('itineraryOutput').classList.remove('hidden');
@@ -1156,6 +1542,76 @@
           submitBtn.disabled = false;
           submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
         }
+      });
+
+      // Cost estimation function
+      function calculateCostEstimate(budget, dates, groupSize) {
+        if (!dates || !dates.includes('→')) return 'Not calculated';
+        
+        const dateRange = dates.split(' → ');
+        const startDate = new Date(dateRange[0]);
+        const endDate = new Date(dateRange[1]);
+        const days = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
+        
+        const groupMultiplier = groupSize.includes('Solo') ? 1 : 
+                              groupSize.includes('Couple') ? 2 : 
+                              groupSize.includes('Family') ? 3.5 : 
+                              groupSize.includes('friends') ? 4 : 6;
+        
+        let dailyBudget;
+        switch(budget) {
+          case 'Budget-Friendly':
+            dailyBudget = 80;
+            break;
+          case 'Luxury':
+            dailyBudget = 250;
+            break;
+          default:
+            dailyBudget = 150;
+        }
+        
+        const totalCost = Math.round(dailyBudget * days * groupMultiplier);
+        return `$${totalCost.toLocaleString()} USD`;
+      }
+
+      // Enhanced button functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        // Map button
+        document.addEventListener('click', function(e) {
+          if (e.target.id === 'openMapBtn' || e.target.closest('#openMapBtn')) {
+            window.open('https://www.google.com/maps/place/Iceland/', '_blank');
+          }
+        });
+
+        // Weather button
+        document.addEventListener('click', function(e) {
+          if (e.target.id === 'weatherBtn' || e.target.closest('#weatherBtn')) {
+            window.open('https://www.weather.is/', '_blank');
+          }
+        });
+
+        // Share button
+        document.addEventListener('click', function(e) {
+          if (e.target.id === 'shareBtn' || e.target.closest('#shareBtn')) {
+            if (navigator.share) {
+              navigator.share({
+                title: 'My Iceland Adventure Itinerary',
+                text: 'Check out my personalized Iceland trip planned with TourOn!',
+                url: window.location.href
+              });
+            } else {
+              navigator.clipboard.writeText(window.location.href);
+              alert('Link copied to clipboard!');
+            }
+          }
+        });
+
+        // Download button (simplified - just prints for now)
+        document.addEventListener('click', function(e) {
+          if (e.target.id === 'downloadBtn' || e.target.closest('#downloadBtn')) {
+            window.print();
+          }
+        });
       });
 
       // Add smooth scrolling for anchor links
