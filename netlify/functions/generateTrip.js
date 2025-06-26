@@ -92,7 +92,7 @@ SPECIAL FOCUS:
 Make this itinerary significantly better than generic travel websites by being highly specific, locally informed, and perfectly tailored to this traveler's profile.`;
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4-turbo",
+      model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7,
       max_tokens: 2000,
@@ -112,13 +112,70 @@ Make this itinerary significantly better than generic travel websites by being h
     };
   } catch (error) {
     console.error("Error generating trip:", error);
+    
+    // Extract user data for fallback (safe extraction)
+    let userData = { name: 'Traveler', dates: 'your dates', groupSize: 'group', budget: 'budget', interests: ['adventure'] };
+    try {
+      const body = JSON.parse(event.body);
+      userData = {
+        name: body.name || 'Traveler',
+        dates: body.dates || 'your dates', 
+        groupSize: body.groupSize || 'group',
+        budget: body.budget || 'budget',
+        interests: body.interests || ['adventure']
+      };
+    } catch (parseError) {
+      // Use defaults if parsing fails
+    }
+    
+    let errorMessage = "Failed to generate itinerary.";
+    
+    if (error.code === 'insufficient_quota') {
+      errorMessage = "⚠️ OpenAI quota exceeded. Please add billing to your OpenAI account at platform.openai.com/settings/organization/billing to enable AI itineraries.";
+    } else if (error.code === 'model_not_found') {
+      errorMessage = "⚠️ AI model not available. Please check your OpenAI account permissions.";
+    } else if (error.message?.includes('API key')) {
+      errorMessage = "⚠️ OpenAI API key issue. Please check your API key configuration.";
+    }
+    
     return {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
       },
-      body: JSON.stringify({ error: "Failed to generate itinerary." }),
+      body: JSON.stringify({ 
+        error: errorMessage,
+        itinerary: `🚨 AI Service Temporarily Unavailable
+
+${errorMessage}
+
+📋 In the meantime, here's a sample Iceland itinerary for ${userData.name}:
+
+🏔️ YOUR ICELAND ADVENTURE (${userData.dates})
+
+Day 1: Golden Circle Classic
+- 9:00 AM: Depart Reykjavik
+- 10:30 AM: Thingvellir National Park (tectonic plates)
+- 12:00 PM: Geysir Geothermal Area 
+- 1:30 PM: Gullfoss Waterfall
+- 3:00 PM: Secret Lagoon (hot springs)
+- Evening: Return to Reykjavik
+
+Day 2: South Coast Adventure  
+- 9:00 AM: Seljalandsfoss Waterfall (walk behind it!)
+- 11:00 AM: Skógafoss Waterfall (Instagram gold)
+- 1:00 PM: Black Sand Beach (Reynisfjara)
+- 3:00 PM: Glacier walk or ice cave tour
+- Evening: Northern Lights hunt (winter)
+
+Day 3: Reykjavik Culture
+- Morning: Blue Lagoon relaxation
+- Afternoon: Reykjavik city tour
+- Evening: Local cuisine tasting
+
+💡 Once AI is working, you'll get personalized recommendations for your ${userData.groupSize.toLowerCase()}, ${userData.budget.toLowerCase()} preferences, and ${userData.interests.join(', ').toLowerCase()} interests!`
+      }),
     };
   }
 };
