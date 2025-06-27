@@ -19,13 +19,24 @@ exports.handler = async (event) => {
 Your personalized ${dates} Iceland adventure is ready! 
 
 📍 DAYS BREAKDOWN:
-${Array.from({length: Math.min(7, Math.max(3, Math.ceil((new Date(dates.split(' → ')[1]) - new Date(dates.split(' → ')[0])) / (1000 * 60 * 60 * 24))))}, (_, i) => `
-Day ${i + 1}: Exploring Iceland's ${['South Coast', 'Golden Circle', 'Reykjavik', 'Westman Islands', 'Glacier Lagoon', 'Northern Lights', 'Blue Lagoon'][i] || 'Hidden Gems'}
+${Array.from({length: Math.min(7, Math.max(3, Math.ceil((new Date(dates.split(' → ')[1]) - new Date(dates.split(' → ')[0])) / (1000 * 60 * 60 * 24))))}, (_, i) => {
+  const destinations = [
+    'Golden Circle: Thingvellir, Geysir, Gullfoss',
+    'South Coast: Seljalandsfoss, Skógafoss, Reynisfjara Black Sand Beach, Vík',
+    'Reykjavik City & Blue Lagoon',
+    'Jökulsárlón Glacier Lagoon & Diamond Beach',
+    'Snæfellsnes Peninsula & Kirkjufell',
+    'Lake Mývatn & Akureyri',
+    'Westfjords Adventure'
+  ];
+  return `
+Day ${i + 1}: ${destinations[i] || 'Hidden Gems Discovery'}
 - Perfect for ${groupSize.toLowerCase()}
 - Tailored to your ${interests.join(', ').toLowerCase()} interests
 - ${budget} budget optimization
 ${specialRequests ? `- Special attention to: ${specialRequests}` : ''}
-`).join('')}
+`;
+}).join('')}
 
 💡 INSIDER TIPS:
 - Weather can change quickly - pack layers!
@@ -75,6 +86,7 @@ ITINERARY REQUIREMENTS:
 - Be hyper-personalized and practical
 - Keep daily driving reasonable (under 3-4 hours/day)
 - Include real landmarks, hikes, towns, and hidden gems in logical order
+- ALWAYS mention specific destination names clearly (e.g., "Reykjavik", "Blue Lagoon", "Gullfoss", "Geysir", "Thingvellir", "Seljalandsfoss", "Skógafoss", "Jökulsárlón", "Reynisfjara", "Vík", "Akureyri", "Lake Mývatn", "Dettifoss", "Westfjords", "Snæfellsnes Peninsula", "Kirkjufell", etc.)
 - Recommend specific restaurants, cafes, and accommodations
 - Include cost-saving tips for budget travelers or luxury experiences for high-end
 - Add seasonal considerations (Northern Lights, road conditions, etc.)
@@ -86,7 +98,7 @@ SPECIAL FOCUS:
 - Provide insider tips that tourists usually miss
 - Include backup plans for weather
 - Suggest local experiences over tourist traps
-- Add specific GPS coordinates for hidden gems
+- Always use proper Icelandic place names for better route mapping
 - Include emergency contacts and practical info
 
 Make this itinerary significantly better than generic travel websites by being highly specific, locally informed, and perfectly tailored to this traveler's profile.`;
@@ -165,11 +177,12 @@ Day 1: Golden Circle Classic
 Day 2: South Coast Adventure  
 - 9:00 AM: Seljalandsfoss Waterfall (walk behind it!)
 - 11:00 AM: Skógafoss Waterfall (Instagram gold)
-- 1:00 PM: Black Sand Beach (Reynisfjara)
-- 3:00 PM: Glacier walk or ice cave tour
+- 1:00 PM: Reynisfjara Black Sand Beach
+- 2:30 PM: Vík village stop
+- 4:00 PM: Jökulsárlón Glacier Lagoon
 - Evening: Northern Lights hunt (winter)
 
-Day 3: Reykjavik Culture
+Day 3: Reykjavik & Blue Lagoon
 - Morning: Blue Lagoon relaxation
 - Afternoon: Reykjavik city tour
 - Evening: Local cuisine tasting
