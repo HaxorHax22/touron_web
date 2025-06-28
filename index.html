@@ -2229,8 +2229,20 @@
             }),
           });
 
+          console.log('Response status:', response.status);
           const data = await response.json();
-          const itinerary = data.itinerary || "Something went wrong.";
+          console.log('Response from server:', data);
+          
+          let itinerary;
+          if (!response.ok || data.error) {
+            // Handle error response from server (status 500 or error field)
+            itinerary = data.itinerary || data.error || "Something went wrong with the AI service.";
+            console.log('Error detected:', data.error);
+          } else {
+            // Handle successful response
+            itinerary = data.itinerary || "Something went wrong.";
+          }
+          
           document.getElementById('outputText').textContent = itinerary;
           
           // Store current itinerary for map processing
