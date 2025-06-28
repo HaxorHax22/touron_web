@@ -2230,20 +2230,44 @@
           });
 
           console.log('Response status:', response.status);
-          const data = await response.json();
-          console.log('Response from server:', data);
           
-          // Temporary debugging alert - remove later
-          alert(`DEBUG INFO:\nStatus: ${response.status}\nHas error: ${!!data.error}\nError: ${data.error}\nHas itinerary: ${!!data.itinerary}`);
+          let data, itinerary;
           
-          let itinerary;
-          if (!response.ok || data.error) {
-            // Handle error response from server (status 500 or error field)
-            itinerary = data.itinerary || data.error || "Something went wrong with the AI service.";
-            console.log('Error detected:', data.error);
+          if (response.status === 502) {
+            // 502 Bad Gateway - Netlify function crashed
+            itinerary = `🚨 Server Error (502)
+
+The AI service is temporarily unavailable due to a server configuration issue.
+
+This usually means:
+• The Netlify function crashed or timed out
+• Missing dependencies in the server
+• OpenAI API configuration issue
+
+Please try again in a few minutes. If the problem persists, the site administrator needs to check the Netlify function logs.
+
+📧 Contact: Check Netlify dashboard → Functions → generateTrip → View logs for details.`;
           } else {
-            // Handle successful response
-            itinerary = data.itinerary || "Something went wrong.";
+            try {
+              data = await response.json();
+              console.log('Response from server:', data);
+              
+              if (!response.ok || data.error) {
+                // Handle error response from server (status 500 or error field)
+                itinerary = data.itinerary || data.error || "Something went wrong with the AI service.";
+                console.log('Error detected:', data.error);
+              } else {
+                // Handle successful response
+                itinerary = data.itinerary || "Something went wrong.";
+              }
+            } catch (jsonError) {
+              console.error('Failed to parse response as JSON:', jsonError);
+              itinerary = `🚨 Server Response Error
+
+The server returned an invalid response (Status: ${response.status}).
+
+This indicates a server-side issue that needs to be resolved by checking the Netlify function logs.`;
+            }
           }
           
           document.getElementById('outputText').textContent = itinerary;
