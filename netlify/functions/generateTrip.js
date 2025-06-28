@@ -4,6 +4,9 @@ exports.handler = async (event) => {
   try {
     const body = JSON.parse(event.body);
     const { name, email, dates, interests, pace, budget, groupSize, specialRequests } = body;
+    
+    // Use fallback name if not provided
+    const travelerName = name && name.trim() ? name : 'Traveler';
 
     // Check if OpenAI API key is configured
     if (!process.env.OPENAI_API_KEY) {
@@ -14,7 +17,7 @@ exports.handler = async (event) => {
           'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify({ 
-          itinerary: `🏔️ DEMO ITINERARY FOR ${name.toUpperCase()} 🏔️
+          itinerary: `🏔️ DEMO ITINERARY FOR ${travelerName.toUpperCase()} 🏔️
 
 Your personalized ${dates} Iceland adventure is ready! 
 
@@ -73,7 +76,7 @@ Happy travels! 🇮🇸`
 
     const prompt = `You're a friendly and highly experienced Icelandic travel expert who creates better itineraries than generic travel planning websites.
 
-Create a personalized and geographically realistic ${tripDays}-day Iceland itinerary for ${name}, visiting from ${dates}. 
+Create a personalized and geographically realistic ${tripDays}-day Iceland itinerary for ${travelerName}, visiting from ${dates}. 
 
 TRAVELER PROFILE:
 - Group: ${groupSize}
@@ -130,7 +133,7 @@ Make this itinerary significantly better than generic travel websites by being h
     try {
       const body = JSON.parse(event.body);
       userData = {
-        name: body.name || 'Traveler',
+        name: (body.name && body.name.trim()) ? body.name : 'Traveler',
         dates: body.dates || 'your dates', 
         groupSize: body.groupSize || 'group',
         budget: body.budget || 'budget',
